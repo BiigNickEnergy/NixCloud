@@ -232,8 +232,8 @@
 		<div class="dropdown-container">
 			<select id="relationshipSelect" onchange="showContent()">
                 <option value="">How do you know me?</option>
-                <option value="Phone Store">Phone Store</option>
-                <option value="Gym">Gym</option>
+                <option value="phone-store">Phone Store</option>
+                <option value="gym">Gym</option>
                 <option value="referral">Someone recommended your work</option>
                 <option value="recruiter">I'm a recruiter/hiring manager</option>
                 <option value="client">Potential client/business inquiry</option>
@@ -259,12 +259,12 @@
             
             // Define routes for each visitor type
             const routes = {
-                'Phone Store': '/phone-store.html',
-                'Gym': '/gym.html',
-                'referral': '/welcome.html',
-                'recruiter': '/hire-me.html',
-                'client': '/services.html',
-                'other': '/explore.html'
+                'phone-store': '/phone-store/',
+  				'gym': '/gym/',
+				'referral': '/welcome/',
+				'recruiter': '/hire-me/',
+				'client': '/services/',
+				'other': '/explore/'
             };
             
             if (selectedValue && routes[selectedValue]) {
