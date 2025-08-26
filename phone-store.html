@@ -85,7 +85,7 @@
 			border-radius: 10px;
 			color: #ffffff;
 			display: none;
-			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 
 		a.back-link {
@@ -116,7 +116,7 @@
 <body>
 	<div class="container">
 		<h1>Questions about your device? Bill?</h1>
-		<p style="text-align: center;">Here’s everything you might need:</p>
+		<p style="text-align: center;">Here's everything you might need:</p>
 
 		<div class="section faq">
 			<h2>❓ Frequently Asked Questions</h2>
@@ -144,47 +144,47 @@
 			<h2>🤔 Why Are You Here?</h2>
 			<p>Help Nick understand what brought you here today:</p>
 			<select id="reasonSelect" onchange="handleReason()">
-        <option value="">-- Select an option --</option>
-        <option value="Quote">New Customer</option>
-        <option value="Bill">Billing issue</option>
-        <option value="buy">Want a new phone!</option>
-        <option value="info">Just browsing</option>
-      </select>
-
-	<div class="section contact-info">
-	<h2>📞 Contact Information</h2>
-	<p><strong>Phone:</strong> (252) 378-0493</p>
-	<p><strong>Email:</strong> nw248b@att.com</p>
-	<p><strong>Store Hours:</strong> Mon–Sun, 10:00 AM – 8:00 PM</p>
-	<p><strong>Location:</strong> 621 Greenville Blvd SE, Greenville, NC 27858</p>
-	</div>
+				<option value="">-- Select an option --</option>
+				<option value="newCustomer">New Customer</option>
+				<option value="bill">Billing issue</option>
+				<option value="buy">Want a new phone!</option>
+				<option value="info">Just browsing</option>
+			</select>
 
 			<div id="messageBox" class="message"></div>
+
+			<div class="contact-info">
+				<h2>📞 Contact Information</h2>
+				<p><strong>Phone:</strong> (252) 378-0493</p>
+				<p><strong>Email:</strong> nw248b@att.com</p>
+				<p><strong>Store Hours:</strong> Mon–Sun, 10:00 AM – 8:00 PM</p>
+				<p><strong>Location:</strong> 621 Greenville Blvd SE, Greenville, NC 27858</p>
+			</div>
 		</div>
 
-		<a href="index.html" class="back-link">← Go back to main page</a>
+		<a href="/index.html" class="back-link">← Go back to main page</a>
 	</div>
 
 	<script>
 		function handleReason() {
-      const select = document.getElementById('reasonSelect');
-      const messageBox = document.getElementById('messageBox');
-      const reason = select.value;
+			const select = document.getElementById('reasonSelect');
+			const messageBox = document.getElementById('messageBox');
+			const reason = select.value;
 
-      const messages = {
-        'Quote': 'I’d be happy to quote you for a new phone! Please call or text me during business hours.',
-        'Bill': 'I would love to take a look. It is highly recommended to speak to the billing department following our conversation for reassurance.',
-        'buy': 'Awesome! We have new models in stock. Come by the store or call us for availability.',
-        'info': 'Feel free to explore and reach out if you have any questions!'
-      };
+			const messages = {
+				'newCustomer': 'Welcome! I\'d be happy to help you get started with a new phone plan. Please call or visit us during business hours to discuss your needs!',
+				'bill': 'I would love to take a look. It is highly recommended to speak to the billing department following our conversation for reassurance.',
+				'buy': 'Awesome! We have new models in stock. Come by the store or call us for availability.',
+				'info': 'Feel free to explore and reach out if you have any questions!'
+			};
 
-      if (reason && messages[reason]) {
-        messageBox.textContent = messages[reason];
-        messageBox.style.display = 'block';
-      } else {
-        messageBox.style.display = 'none';
-      }
-    }
+			if (reason && messages[reason]) {
+				messageBox.textContent = messages[reason];
+				messageBox.style.display = 'block';
+			} else {
+				messageBox.style.display = 'none';
+			}
+		}
 	</script>
 </body>
 
