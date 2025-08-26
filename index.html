@@ -155,13 +155,13 @@
 		}
 
 		.content-area h3 {
-			color: #333;
+			color: #f3f4f6;
 			margin-bottom: 15px;
 			font-size: 1.3em;
 		}
 
 		.content-area p {
-			color: #666;
+			color: #d1d5db;
 			line-height: 1.6;
 			margin-bottom: 15px;
 		}
@@ -257,18 +257,23 @@
             const select = document.getElementById('relationshipSelect');
             const selectedValue = select.value;
             
-            // Define routes for each visitor type
+            // Define routes for each visitor type (UPDATED FOR DIRECT HTML FILES)
             const routes = {
-                'phone-store': '/phone-store/',
-  				'gym': '/gym/',
-				'referral': '/welcome/',
-				'recruiter': '/hire-me/',
-				'client': '/services/',
-				'other': '/explore/'
+                'phone-store': 'phone-store.html',
+                'gym': 'gym.html',
+                'referral': 'welcome.html',
+                'recruiter': 'hire-me.html',
+                'client': 'services.html',
+                'other': 'explore.html'
             };
             
             if (selectedValue && routes[selectedValue]) {
-                // Optional: Show loading state
+                // Show loading state
+                const loadingDiv = document.getElementById('loading');
+                loadingDiv.style.display = 'block';
+                loadingDiv.classList.add('show');
+                
+                // Optional: Disable dropdown during navigation
                 select.style.opacity = '0.7';
                 select.disabled = true;
                 
@@ -278,7 +283,7 @@
                 // Navigate after a short delay for better UX
                 setTimeout(() => {
                     window.location.href = targetUrl;
-                }, 500);
+                }, 800);
             }
         }
         
@@ -286,7 +291,9 @@
         document.getElementById('relationshipSelect').addEventListener('change', function() {
             this.style.borderColor = '#6b46c1';
             setTimeout(() => {
-                this.style.borderColor = '#4b5563';
+                if (!this.disabled) {
+                    this.style.borderColor = '#4b5563';
+                }
             }, 2000);
         });
         
