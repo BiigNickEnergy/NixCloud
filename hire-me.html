@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter/Hiring Manager - Let's Talk!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #2d1b4e 0%, #4c1d95 50%, #6b46c1 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(55, 65, 81, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 50px 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            color: #f3f4f6;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f3f4f6;
+        }
+
+        .subtitle {
+            color: #d1d5db;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .content h2 {
+            color: #8b5cf6;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #d1d5db;
+        }
+
+        .back-btn, .cta-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #6b46c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .back-btn:hover, .cta-btn:hover {
+            background: #5b21b6;
+            transform: translateY(-2px);
+        }
+
+        .cta-btn {
+            background: #22c55e;
+        }
+
+        .cta-btn:hover {
+            background: #16a34a;
+        }
+
+        .contact-info {
+            background: rgba(107, 70, 193, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #6b46c1;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .skill-category {
+            background: rgba(34, 197, 94, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #22c55e;
+        }
+
+        .skill-category h3 {
+            color: #22c55e;
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            color: #d1d5db;
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: rgba(251, 191, 36, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #fbbf24;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💼 Let's Talk Opportunities!</h1>
+        <p class="subtitle">Thanks for considering me! I'm excited to learn about the role you have in mind.</p>
+        
+        <div class="content">
+            <div class="highlight">
+                <h2>🚀 Ready to Make an Impact</h2>
+                <p>I'm actively exploring new opportunities and would love to discuss how I can contribute to your team's success.</p>
+            </div>
+
+            <h2>What I Bring to the Table</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Full-stack development</li>
+                        <li>Cloud architecture</li>
+                        <li>Database design</li>
+                        <li>API development</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Team leadership</li>
+                        <li>Problem solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h2>Why Consider Me?</h2>
+                <ul>
+                    <li><strong>Proven track record</strong> of delivering results on time and under budget</li>
+                    <li><strong>Quick learner</strong> who adapts fast to new technologies and environments</li>
+                    <li><strong>Team player</strong> with experience mentoring junior developers</li>
+                    <li><strong>Business-minded</strong> - I understand how technology drives business value</li>
+                    <li><strong>Reliable</strong> - colleagues and clients can count on me to deliver</li>
+                </ul>
+            </div>
+
+            <h2>Next Steps</h2>
+            <p>I'd love to schedule a conversation to discuss:</p>
+            <ul>
+                <li>The specific role and responsibilities</li>
+                <li>Team structure and company culture</li>
+                <li>Growth opportunities and career path</li>
+                <li>How my experience aligns with your needs</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="cta-btn">📧 Schedule a Call</a>
+                <a href="#" class="cta-btn">📄 View My Resume</a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Main Page</a>
+    </div>
+</body>
+</html>
